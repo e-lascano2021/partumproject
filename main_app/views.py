@@ -16,7 +16,10 @@ def projects_index(request):
 
 def projects_detail (request, project_id):
   project = Project.objects.get(id=project_id)
-  return render(request, 'projects/detail.html', {'project': project})
+  features_project_doesnt_have = Feature.objects.exclude(id__in = project.features.all().values_list('id'))
+  return render(request, 'projects/detail.html', {
+    'project': project,
+    'features': features_project_doesnt_have})
 
 
 

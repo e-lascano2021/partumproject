@@ -29,29 +29,43 @@
 </section>
 
 <section>
-    <div>
-      <h2>Features</h2>
-      <img src="{% static 'images/' %}" alt="" />
-      <img src="{% static 'images/' %}" alt="e" />
-      <img src="{% static 'images/' %}" alt="" />
-    </div>
-    <h3>Features Included</h3>
-    <div>
-      {% if project.features.count %}
-        {% for feature in project.features.all %}
-          <div>
-            <p>{{ feature.name }} - {{ feature.difficulty }}</p>
-          </div>
-        {% endfor %}
-      {% else %}
-        <p> There are no Features </p>
-      {% endif %}
-    </div>
-    <h3>Available Features</h3>
-    <div>
-
-    </div>
-  </section>
+  <div>
+    <h2>Features</h2>
+    <img src="{% static 'images/' %}" alt="" />
+    <img src="{% static 'images/' %}" alt="e" />
+    <img src="{% static 'images/' %}" alt="" />
+  </div>
+  <h3>Features Included</h3>
+  <div>
+    {% if project.features.count %}
+      {% for feature in project.features.all %}
+        <div>
+          <p>{{ feature.name }} - {{ feature.difficulty }}</p>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p> There are no Features </p>
+    {% endif %}
+  </div>
+  <h3>Available Features</h3>
+  <div>
+    {% if features.count %}
+      {% for feature in features.all %}
+        <div>
+          <p>{{ feature.name }} - {{ feature.difficulty }}</p>
+          <form action="" method="post">
+            {% csrf_token %}
+              <button type="submit" class="btn submit">Add Feature</button>
+          </form>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>
+        You have added all available features to this project
+      </p>
+    {% endif %}
+  </div>
+</section>
 
 
 {% endblock %}
