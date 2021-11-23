@@ -25,6 +25,10 @@ def assoc_feature(request, project_id, feature_id):
   Project.objects.get(id=project_id).features.add(feature_id)
   return redirect('projects_detail', project_id=project_id)
 
+def unassoc_feature(request, project_id, feature_id):
+  Project.objects.get(id=project_id).features.remove(feature_id)
+  return redirect('projects_detail', project_id=project_id)
+
 class ProjectCreate(CreateView):
   model = Project
   fields = ['name', 'progress', 'start_date', 'end_date', 'description']

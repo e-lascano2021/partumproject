@@ -41,6 +41,10 @@
       {% for feature in project.features.all %}
         <div>
           <p>{{ feature.name }} - {{ feature.difficulty }}</p>
+          <form action="{% url 'unassoc_feature' project.id feature.id %}" method="post">
+            {% csrf_token %}
+              <button type="submit" class="btn submit">Remove Feature</button>
+          </form>
         </div>
       {% endfor %}
     {% else %}
