@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView
 from .models import Project, Feature
@@ -21,7 +21,9 @@ def projects_detail (request, project_id):
     'project': project,
     'features': features_project_doesnt_have})
 
-
+def assoc_feature(request, project_id, feature_id):
+  Project.objects.get(id=project_id).features.add(feature_id)
+  return redirect('projects_detail', project_id=project_id)
 
 class ProjectCreate(CreateView):
   model = Project

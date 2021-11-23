@@ -53,7 +53,7 @@
       {% for feature in features.all %}
         <div>
           <p>{{ feature.name }} - {{ feature.difficulty }}</p>
-          <form action="" method="post">
+          <form action="{% url 'assoc_feature' project.id feature.id %}" method="post">
             {% csrf_token %}
               <button type="submit" class="btn submit">Add Feature</button>
           </form>
