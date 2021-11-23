@@ -6,9 +6,12 @@
 {% endblock %}
 
 {% block content %}
-
+  {% if object %}
+    <h1>Edit {{object.name}}</h1>
+  {% else %}
+    <h1>Add a Project</h1>
+  {% endif %}
 <div>
-  <h1>Add a Project</h1>
   <img src="{% static 'images/' %}" alt=""/>
 </div>
 <form action="" method="post">
