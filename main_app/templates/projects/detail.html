@@ -13,10 +13,17 @@
 
 <section>
   <div>
-    <img 
-      src="{% static 'images/' %}" 
-      alt=""
-    >
+    {% if project.photo.url %}
+      <img 
+        src="{{ project.photo.url }}" 
+        alt="A photo of {{ project.name }}"
+      >
+    {% else %}
+      <img 
+        src="{% static 'images/femalesolar.jpeg' %}" 
+        alt=""
+      >
+    {% endif %}
   </div>
   <div>
     <h1>{{ project.name }}</h1>
@@ -25,6 +32,20 @@
       <a href="{% url 'projects_update' project.id %}">Edit</a>
       <a href="{% url 'projects_delete' project.id %}">Delete</a>
     </div>
+    <h3>Change {{ project.name }}'s photo</h3>
+    <p></p>
+    <form 
+      action="{% url 'add_photo' project.id %}"
+      enctype="multipart/form-data"
+      method="POST"
+    >
+      {% csrf_token %}
+      <label class="btn secondary">
+        Choose photo
+        <input type="file" name="photo-file">
+      </label>
+      <button type="submit" class="btn submit">Upload Photo</button>
+    </form>
   </div>
 </section>
 
@@ -32,7 +53,7 @@
   <div>
     <h2>Features</h2>
     <img src="{% static 'images/' %}" alt="" />
-    <img src="{% static 'images/' %}" alt="e" />
+    <img src="{% static 'images/' %}" alt="" />
     <img src="{% static 'images/' %}" alt="" />
   </div>
   <h3>Features Included</h3>
