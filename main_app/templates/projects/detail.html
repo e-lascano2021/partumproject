@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/project-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section>
+  <div>
+    <img 
+      src="{% static 'images/' %}" 
+      alt=""
+    >
+  </div>
+  <div>
+    <h1>{{ project.name }}</h1>
+    <p>{{ project.progress }}</p>
+  </div>
+</section>
+
+{% endblock %}

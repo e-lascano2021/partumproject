@@ -18,16 +18,18 @@
 <section>
   {% for project in projects %}
     <div>
-      <div>
+      <a href="/projects/{{ project.id }}">
         <div>
-          <img 
-            src="{% static 'images/' %}" 
-            alt=""
-          >
+          <div>
+            <img 
+              src="{% static 'images/' %}" 
+              alt=""
+            >
+          </div>
+          <h2>{{ project.name }}</h2>
+          <p><small>{{ project.progress }}</small></p>
         </div>
-        <h2>{{ project.name }}</h2>
-        <p><small>{{ project.progress }}</small></p>
-      </div>
+      </a>
     </div>
   {% endfor %}
 </section>
