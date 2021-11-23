@@ -22,11 +22,12 @@
 <section>
   {% for feature in feature_list %}
   <div>
-      <div>
-        <h2>{{ feature.name }}</h2>
-        <p>{{ feature.difficulty }}</p>
-      </div>
-    </a>
+    <div>
+      <h2>{{ feature.name }}</h2>
+      <p>{{ feature.difficulty }}</p>
+    </div>
+    <a href="{% url 'features_update' feature.id %}" class="btn warn">Edit</a>
+    <a href="{% url 'features_delete' feature.id %}" class="btn danger">Delete</a>
   </div>
   {% endfor %}
 </section>

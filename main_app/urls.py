@@ -11,4 +11,6 @@ urlpatterns = [
   path('projects/<int:pk>/delete/', views.ProjectDelete.as_view(), name='projects_delete'),
   path('features/create/', views.FeatureCreate.as_view(), name='features_create'),
   path('features/', views.FeatureList.as_view(), name='features_index'),
+  path('features/<int:pk>/update/', views.FeatureUpdate.as_view(), name='features_update'),
+  path('features/<int:pk>/delete/', views.FeatureDelete.as_view(), name='features_delete'),
 ]

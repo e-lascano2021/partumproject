@@ -39,3 +39,11 @@ class FeatureCreate(CreateView):
 
 class FeatureList(ListView):
   model = Feature
+
+class FeatureUpdate(UpdateView):
+  model = Feature
+  fields = '__all__'
+
+class FeatureDelete(DeleteView):
+  model = Feature
+  success_url = '/features/'
