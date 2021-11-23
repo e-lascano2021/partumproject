@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 PROGRESS = (
   ('N', 'Not Started'),
@@ -19,3 +20,6 @@ class Project(models.Model):
   
   def __str__(self):
     return self.name
+
+  def get_absolute_url(self):
+    return reverse('projects_detail', kwargs={'project_id': self.id})

@@ -22,5 +22,5 @@ def projects_detail (request, project_id):
 class ProjectCreate(CreateView):
   model = Project
   fields = '__all__'
-
+  success_url = '/projects/'
 
