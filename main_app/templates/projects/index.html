@@ -18,7 +18,7 @@
 <section>
   {% for project in projects %}
     <div>
-      <a href="/projects/{{ project.id }}">
+      <a href="{% url 'projects_detail' project.id %}">
         <div>
           <div>
             <img 
