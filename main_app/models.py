@@ -40,6 +40,7 @@ class Project(models.Model):
   choices=PROGRESS,
   default=PROGRESS[0][0]
   )
+  features = models.ManyToManyField(Feature)
   
   def __str__(self):
     return self.name

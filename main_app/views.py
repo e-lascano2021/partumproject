@@ -22,7 +22,7 @@ def projects_detail (request, project_id):
 
 class ProjectCreate(CreateView):
   model = Project
-  fields = '__all__'
+  fields = ['name', 'progress', 'start_date', 'end_date', 'description']
   success_url = '/projects/'
 
 class ProjectUpdate(UpdateView):
