@@ -21,6 +21,10 @@
   <div>
     <h1>{{ project.name }}</h1>
     <p>{{ project.progress }}</p>
+    <div>
+      <a href="{% url 'projects_update' project.id %}">Edit</a>
+      <a href="{% url 'projects_delete' project.id %}">Delete</a>
+    </div>
   </div>
 </section>
 
