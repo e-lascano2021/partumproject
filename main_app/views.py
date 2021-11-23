@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Project
+from .models import Project, Feature
 
 
 def home(request):
@@ -31,3 +31,7 @@ class ProjectUpdate(UpdateView):
 class ProjectDelete(DeleteView):
   model = Project
   success_url = '/projects/'
+
+class FeatureCreate(CreateView):
+  model =  Feature
+  fields = '__all__'
