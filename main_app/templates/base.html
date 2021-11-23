@@ -27,11 +27,17 @@
     </div>
     <nav>
       <ul>
-        <li><a href="{% url 'projects_index' %}">All Projects</a></li>
-        <li><a href="{% url 'features_index' %}">All Features</a></li>
-        <li><a href="{% url 'projects_create' %}">Add a Project</a></li>
-        <li><a href="{% url 'features_create' %}">Add a Feature</a></li>
-        <li><a href="{% url 'about' %}">About</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'projects_index' %}">All Projects</a></li>
+          <li><a href="{% url 'features_index' %}">All Features</a></li>
+          <li><a href="{% url 'projects_create' %}">Add a Project</a></li>
+          <li><a href="{% url 'features_create' %}">Add a Feature</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+        {% else %}
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'home' %}">Login</a></li>
+          <li><a href="{% url 'signup' %}">Sign Up</a></li>
+        {% endif %}
       </ul>
     </nav>
   </header>
