@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+<section>
+  <div>
+    <img src="{% static 'images/' %}" alt="The Partum Project" />
+  </div>
+  <img 
+    src="{% static 'images/' %}" 
+    alt="Text reads: Partum Project"
+  />
+</section>
+
+{% endblock %}
