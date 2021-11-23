@@ -47,3 +47,11 @@ class Project(models.Model):
 
   def get_absolute_url(self):
     return reverse('projects_detail', kwargs={'project_id': self.id})
+
+
+class Photo(models.Model):
+  url = models.CharField(max_length=250)
+  cat = models.OneToOneField(Project, on_delete=models.CASCADE)
+
+  def __str__(self):
+    return f"Photo for project_id: {self.project_id} @{self.url}"

@@ -15,4 +15,5 @@ urlpatterns = [
   path('features/<int:pk>/delete/', views.FeatureDelete.as_view(), name='features_delete'),
   path('projects/<int:project_id>/assoc_feature/<int:feature_id>/', views.assoc_feature, name='assoc_feature'),
   path('projects/<int:project_id>/unassoc_feature/<int:feature_id>/', views.unassoc_feature, name='unassoc_feature'),
+  path('projects/<int:project_id>/add_photo/', views.add_photo, name='add_photo'),
 ]
