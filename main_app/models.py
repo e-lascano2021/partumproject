@@ -25,7 +25,7 @@ class Feature(models.Model):
     return self.name
 
   def get_absolute_url(self):
-    return reverse("features_detail", kwargs={"pk": self.id})
+    return reverse("features_index")
 
 
 

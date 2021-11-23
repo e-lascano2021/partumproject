@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic import ListView
 from .models import Project, Feature
 
 
@@ -35,3 +36,6 @@ class ProjectDelete(DeleteView):
 class FeatureCreate(CreateView):
   model =  Feature
   fields = '__all__'
+
+class FeatureList(ListView):
+  model = Feature
