@@ -7,6 +7,29 @@ PROGRESS = (
   ('C', 'Completed')
 )
 
+LEVELS = (
+  ('E', 'Easy'),
+  ('I', 'Intermediate'),
+  ('D', 'Difficult'),
+)
+
+class Feature(models.Model):
+  name = models.CharField(max_length = 50)
+  difficulty = models.CharField(
+    max_length = 1,
+    choices = LEVELS,
+    default = LEVELS[1][0]
+  )
+
+  def __str__(self):
+    return self.name
+
+  def get_absolute_url(self):
+    return reverse("features_detail", kwargs={"pk": self.id})
+
+
+
+
 class Project(models.Model):
   name = models.CharField(max_length=200)
   start_date = models.DateField('Start Date')
