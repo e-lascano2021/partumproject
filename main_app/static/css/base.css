@@ -18,5 +18,13 @@ html {
 }
 
 body {
-  background-color: lightsteelblue;
+  --background-img: url("https://media.istockphoto.com/photos/creative-background-with-stone-texture-and-multi-colored-halftones-of-picture-id1064922974");
+  background-image: var(--background-img);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size:cover;
 }
