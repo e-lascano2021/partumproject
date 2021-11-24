@@ -20,6 +20,8 @@ html {
 
 body { 
   --background-img: url("https://user-images.githubusercontent.com/91232529/143167063-b2929b36-66ee-4b11-a900-f327b242ed25.jpeg");
+  --nav-bg-ff: rgba(104, 197, 248, .9);
+  --borders: rgb(36, 116, 248) solid 2px;
   background-image: var(--background-img);
   font-family: 'Kaushan Script', cursive;
   margin: 0;
@@ -30,4 +32,54 @@ body {
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
+}
+
+body.dark {
+  --background-img: url("https://images.unsplash.com/photo-1566410824233-a8011929225c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80 ");
+  background-image: var(--background-img);
+}
+
+header {
+  width: 100%;
+  background: var(--nav-bg-ff);
+  border-bottom: var(--borders);
+}
+
+nav {
+  margin: 20px
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: var(--link-hover-color)
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  padding: 5px 8px;
+}
+
+.header-logo-container {
+  /* margin: auto; */
+  padding: 10px 20px 0;
+  max-width: 100px;
 }
