@@ -12,7 +12,7 @@
 {% block content %}
 
 <section class="page-header">
-  <h1>All Project Features</h1>
+  <h1>All Features</h1>
   <img src="{% static 'images/' %}" alt="" />
   <img src="{% static 'images/' %}" alt="" />
   <img src="{% static 'images/' %}" alt="" />
@@ -23,11 +23,13 @@
   {% for feature in feature_list %}
   <div class="card">
     <div class="card-bg">
-      <h2>{{ feature.name }}</h2>
-      <p>{{ feature.difficulty }}</p>
+      <h2>{{ feature.name }}</h2><br>
+      <h2>{{ feature.difficulty }}</h2>
     </div>
+  </div>
+  <div>
     <a href="{% url 'features_update' feature.id %}" class="btn warn">Edit</a>
-    <a href="{% url 'features_delete' feature.id %}" class="btn danger">Delete</a>
+    <a href="{% url 'features_delete' feature.id %}" class="btn danger">Delete</a> 
   </div>
   {% endfor %}
 </section>
