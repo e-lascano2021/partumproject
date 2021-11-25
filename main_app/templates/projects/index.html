@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<section>
+<section class="page-header">
   <h1>Project List</h1>
   <img src="{% static 'images/' %}" alt="" />
   <img src="{% static 'images/' %}" alt="" />
@@ -15,19 +15,33 @@
   <img src="{% static 'images/' %}" alt="" />
 </section>
 
-<section>
+<section class="card-container">
   {% for project in projects %}
-    <div>
+    <div class="card">
       <a href="{% url 'projects_detail' project.id %}">
-        <div>
-          <div>
-            <img 
-              src="{% static 'images/' %}" 
-              alt=""
-            >
+        <div class="card-content">
+          <div class="card-img-container">
+            {% if cat.photo.url %}
+              <img 
+                src="{{cat.photo.url}}" 
+                alt="A photo of {{cat.name}}"
+                class="usr-img"
+              >
+            {% else %}
+              <img 
+                src="{% static 'images/sk8r-boi-cat.svg' %}" 
+                alt="A skater boy cat"
+              >
+            {% endif %}
           </div>
-          <h2>{{ project.name }}</h2>
-          <p><small>{{ project.progress }}</small></p>
+          <h2 class="card-title">{{ project.name }}</h2>
+          {% if project.progress == 'P' %}
+            <p>In Progress</p>
+          {% elif project.progress == "N"%}
+            <p>Not Started</p>
+          {% else %}
+            <p>Complete</p>
+          {% endif %}
         </div>
       </a>
     </div>

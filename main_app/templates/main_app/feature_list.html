@@ -19,10 +19,10 @@
   <img src="{% static 'images/' %}" alt="" />
 </section>
 
-<section>
+<section class="card-container">
   {% for feature in feature_list %}
-  <div>
-    <div>
+  <div class="card">
+    <div class="card-bg">
       <h2>{{ feature.name }}</h2>
       <p>{{ feature.difficulty }}</p>
     </div>

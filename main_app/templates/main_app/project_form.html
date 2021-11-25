@@ -2,19 +2,20 @@
 {% load static %}
 
 {% block head %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}"/>
 {% endblock %}
 
 {% block content %}
+<div>
   {% if object %}
     <h1>Edit {{object.name}}</h1>
   {% else %}
     <h1>Add a Project</h1>
   {% endif %}
-<div>
-  <img src="{% static 'images/' %}" alt=""/>
+    <img src="{% static 'images/' %}" alt=""/>    
 </div>
-<form action="" method="post">
+
+<form action="" method="post" class="form-container">
   {% csrf_token %}
   <table>
     {{ form.as_table }}

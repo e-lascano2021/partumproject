@@ -3,13 +3,13 @@
 
 {% block content %}
 
-<div>
+<div class="page-header">
   <h1>Delete Project?</h1>
   <img src="{% static 'images/' %}" alt="r"/>
 </div>
 <h2>Are you sure you want to delete {{ object.name }}?</h2>
 
-<form action="" method="POST">
+<form action="" method="POST" class="form">
   {% csrf_token %}
   <a 
     href="{% url 'projects_detail' project.id %}" 
@@ -17,7 +17,7 @@
   >
     Cancel
   </a>
-  <button type="submit">Yes - Delete!</button>
+  <button type="submit" class="btn danger">Yes - Delete!</button>
 </form>
 
 {% endblock %}
