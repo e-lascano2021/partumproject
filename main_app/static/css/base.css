@@ -55,6 +55,74 @@ a {
 li {
   list-style: none;
 }
+
+main {
+  margin-top: 120px;
+  width: 100%;
+}
+
+h2 {
+  font-size: var(--font-xl);
+}
+
+header {
+  position: fixed;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.btn {
+  font-size: var(--font-l);
+  padding: 8px 16px;
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+  text-decoration: none;
+  background-color: var(--button-bg);
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  margin-right: 10px;
+}
+
+.submit {
+  color: var(--submit);
+  border-color: var(--submit);
+}
+
+.secondary {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.warn {
+  color: var(--warn);
+  border-color: var(--warn);
+}
+
+.danger {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.page-header h1 {
+  font-size: var(--font-xxl);
+  margin: 0;
+}
+
+.page-header img {
+  height: 40px;
+  margin-left:15px;
+}
+
+.page-header img:first-of-type {
+  margin-left: 20px;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -65,6 +133,7 @@ li {
   border: white solid 1px;
   border-radius: 15px;
  }
+
  .nav-links a {
   font-size: 20px;
   color: rgba(255, 20, 224, 0.666);
@@ -165,68 +234,6 @@ li {
   background-color: #fbcdffa8;
  }
  }
-
-main {
-  width: 100%;
-}
-
-h2 {
-  font-size: var(--font-xl);
-}
-
-.page-header {
-  display: flex;
-  align-items: center;
-  margin: 20px;
-}
-
-.btn {
-  font-size: var(--font-l);
-  padding: 8px 16px;
-  border-radius: 6px;
-  border-width: 2px;
-  border-style: solid;
-  text-decoration: none;
-  background-color: var(--button-bg);
-  font-weight: 600;
-  cursor: pointer;
-  font-family: inherit;
-  margin-right: 10px;
-}
-
-.submit {
-  color: var(--submit);
-  border-color: var(--submit);
-}
-
-.secondary {
-  color: var(--secondary);
-  border-color: var(--secondary);
-}
-
-.warn {
-  color: var(--warn);
-  border-color: var(--warn);
-}
-
-.danger {
-  color: var(--danger);
-  border-color: var(--danger);
-}
-
-.page-header h1 {
-  font-size: var(--font-xxl);
-  margin: 0;
-}
-
-.page-header img {
-  height: 40px;
-  margin-left:15px;
-}
-
-.page-header img:first-of-type {
-  margin-left: 20px;
-}
 
 @media only screen and (min-width: 768px) {
   main {
