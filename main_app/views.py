@@ -90,7 +90,7 @@ class ProjectCreate(LoginRequiredMixin, CreateView):
 
 class ProjectUpdate(LoginRequiredMixin, UpdateView):
   model = Project
-  fields = '__all__'
+  fields =  ['name', 'progress', 'start_date', 'end_date', 'description']
 
 class ProjectDelete(LoginRequiredMixin, DeleteView):
   model = Project

@@ -30,13 +30,13 @@ body {
   --warn: rgb(255, 102, 0);
   --danger: rgb(220, 20, 30);
   --secondary: rgb(57, 57, 57);
-  --card-box-shadow: 5px 5px 6px -1px #AAA;
+  --card-box-shadow: 5px 6px 6px -1px rgba(221, 175, 245, 0.66);
   --font-xtreme: 4.2rem;
   --font-xxl: 3.6rem;
   --font-xl: 2.4rem;
   --font-l: 1.8rem;
   --font-reg: 1.6rem;
-  --card-border-radius: 6px;
+  --card-border-radius: 16px;
   background-image: url("https://cdn11.bigcommerce.com/s-et4qthkygq/images/stencil/1280x1280/products/3568/18323/CD112412_Rainbow_Marble_HTV__48688.1602872920.jpg?c=2");
   font-family: 'Kaushan Script', cursive;
   margin: 0;
@@ -126,6 +126,10 @@ li {
   display: none;
   font-size: 24px;
   user-select: none;
+ }
+
+ #logo-img{
+   width: 45px;
  }
  /* APPLYING MEDIA QUERIES */
  @media (max-width: 768px) {
