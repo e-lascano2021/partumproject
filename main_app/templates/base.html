@@ -14,15 +14,12 @@
   {% endblock %}
 </head>
 <body>
+
   <nav class="navbar">
-    <!-- LOGO -->
     <div class="logo">Partum Project</div>
-    <!-- NAVIGATION MENU -->
     <ul class="nav-links">
-      <!-- USING CHECKBOX HACK -->
       <input type="checkbox" id="checkbox_toggle" />
       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-      <!-- NAVIGATION MENUS -->
       <div class="menu">
         {% if user.is_authenticated %}
           <li><a href="{% url 'about' %}">About</a></li>
@@ -49,7 +46,6 @@
       </div>
     </ul>
   </nav>
-
 
   <main>
     {% block content %}
