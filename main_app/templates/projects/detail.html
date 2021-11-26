@@ -29,8 +29,8 @@
     <h1>{{ project.name }}</h1>
     <p>{{ project.progress }}</p>
     <div class="project-actions">
-      <a href="{% url 'projects_update' project.id %}" class="btn warn">Edit</a>
-      <a href="{% url 'projects_delete' project.id %}" class="btn danger">Delete</a>
+      <a href="{% url 'projects_update' project.id %}" class="btn warn"><i class="far fa-edit"></i></a>
+      <a href="{% url 'projects_delete' project.id %}" class="btn danger"><i class="fas fa-trash-alt"></i></a>
     </div>
     <h3>Change {{ project.name }}'s photo</h3>
     <p id="file-name"></p>
@@ -44,7 +44,7 @@
         Choose photo
         <input type="file" name="photo-file" id="file-input">
       </label>
-      <button type="submit" class="btn submit">Upload Photo</button>
+      <button type="submit" class="btn submit"><i class="fas fa-arrow-circle-up"></i></button>
     </form>
   </div>
 </section>
@@ -69,7 +69,7 @@
             <p>{{ feature.name }} - {{ feature.difficulty }}</p>
             <form action="{% url 'unassoc_feature' project.id feature.id %}" method="post">
               {% csrf_token %}
-                <button type="submit" class="btn submit">Remove Feature</button>
+                <button type="submit" class="btn submit"><i class="fas fa-minus"></i></button>
             </form>
           </div>
         {% endfor %}
@@ -88,7 +88,7 @@
             <p>{{ feature.name }} - {{ feature.difficulty }}</p>
             <form action="{% url 'assoc_feature' project.id feature.id %}" method="post">
               {% csrf_token %}
-                <button type="submit" class="btn submit">Add Feature</button>
+                <button type="submit" class="btn submit"><i class="fas fa-plus"></i></button>
             </form>
           </div>
         {% endfor %}
