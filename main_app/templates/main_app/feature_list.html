@@ -32,11 +32,11 @@
         <h2><br>Easy</h2>
       {% endif %}
     </div>
+  </div>
     <div>
       <a href="{% url 'features_update' feature.id %}" class="btn warn"><i class="far fa-edit"></i></a>
       <a href="{% url 'features_delete' feature.id %}" class="btn danger"><i class="fas fa-trash-alt"></i></a> 
     </div>
-  </div>
   {% endfor %}
 </section>
 

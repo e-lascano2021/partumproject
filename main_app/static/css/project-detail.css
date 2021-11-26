@@ -8,14 +8,18 @@
 
 .project-img * {
   height: 240px;
-  padding-right: 10px;
+  margin-right: 20px;
 }
 
 .project-details {
-  padding: 0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
   margin: 0;
-  width: 50%;
-  background-color: rgba(255, 243, 255, 0.351);
+  width: 350px;
+  background-color: rgba(135, 27, 135, 0.386);
+  border: white solid .1px;
 }
 
 .project-actions {
@@ -183,28 +187,5 @@
     padding: 35px 30px;
     flex-direction: row;
     align-items: center;
-    justify-content: start;
-  }
-
-  .project-img {
-    width: 25%;
-    max-width: 250px;
-    margin-right: 25px;
-  }
-
-  .feedings-feature-container {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-
-  .feedings-feature-container > section {
-    width: 45%;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .feedings-feature-container {
-    padding: 0 40px;
   }
 }

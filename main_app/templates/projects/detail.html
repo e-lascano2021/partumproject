@@ -33,7 +33,6 @@
       <a href="{% url 'projects_delete' project.id %}" class="btn danger"><i class="fas fa-trash-alt"></i></a>
     </div>
     <h3>Change {{ project.name }}'s photo</h3>
-    <p id="file-name"></p>
     <form 
       action="{% url 'add_photo' project.id %}"
       enctype="multipart/form-data"
@@ -41,7 +40,7 @@
     >
       {% csrf_token %}
       <label class="btn secondary">
-        Choose photo
+        <i class="far fa-images"></i>
         <input type="file" name="photo-file" id="file-input">
       </label>
       <button type="submit" class="btn submit"><i class="fas fa-arrow-circle-up"></i></button>
@@ -49,7 +48,10 @@
   </div>
 </section>
 
-
+<section>
+  <div>
+  </div>
+</section>
 
 <section>
   <div>
