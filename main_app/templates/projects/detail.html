@@ -60,12 +60,12 @@
   </div>
 
 
-  <div>
+  <div projects-feature-container>
     <h3>Features Included</h3>
-    <div>
+    <div class="subsection-content">
       {% if project.features.count %}
         {% for feature in project.features.all %}
-          <div>
+          <div class="feature-container">
             <p>{{ feature.name }} - {{ feature.difficulty }}</p>
             <form action="{% url 'unassoc_feature' project.id feature.id %}" method="post">
               {% csrf_token %}
@@ -74,12 +74,12 @@
           </div>
         {% endfor %}
       {% else %}
-        <p> There are no Features Included</p>
+        <p class="all-features"> There are no Features Included</p>
       {% endif %}
     </div>
   </div>
 
-  <div>
+  <div class="">
     <h3>Available Features</h3>
     <div>
       {% if features.count %}

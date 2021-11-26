@@ -21,16 +21,16 @@
       <a href="{% url 'projects_detail' project.id %}">
         <div class="card-content">
           <div class="card-img-container">
-            {% if cat.photo.url %}
+            {% if project.photo.url %}
               <img 
-                src="{{cat.photo.url}}" 
-                alt="A photo of {{cat.name}}"
+                src="{{project.photo.url}}" 
+                alt="A photo of {{project.name}}"
                 class="usr-img"
               >
             {% else %}
               <img 
-                src="{% static 'images/sk8r-boi-cat.svg' %}" 
-                alt="A skater boy cat"
+                src="{% static 'images/' %}" 
+                alt=""
               >
             {% endif %}
           </div>

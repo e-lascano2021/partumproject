@@ -8,43 +8,49 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-  <link
-    rel="shortcut icon"
-    type="image/png"
-    href=""
-  >
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
   <title>Partum Project</title>
   {% block head %}
   {% endblock %}
 </head>
 <body>
-  <header>
-    <div class="header-logo-container">
-      <a href="/">
-        <img 
-          src="{% static 'images/Birne.svg' %}" 
-          alt="Partum Project Logo"
-        >
-      </a>
-    </div>
-    <nav>
-      <ul>
+  <nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo">Partum Project</div>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+      <!-- USING CHECKBOX HACK -->
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+      <!-- NAVIGATION MENUS -->
+      <div class="menu">
         {% if user.is_authenticated %}
-          <li><a href="{% url 'projects_index' %}">All Projects</a></li>
-          <li><a href="{% url 'features_index' %}">All Features</a></li>
-          <li><a href="{% url 'projects_create' %}">Add a Project</a></li>
-          <li><a href="{% url 'features_create' %}">Add a Feature</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'logout' %}">Log out</a></li>
+          <li class="projects-links">
+            <a href="/">Projects</a>
+            <ul class="dropdown">
+              <li><a href="{% url 'projects_index' %}">All Projects</a></li>
+              <li><a href="{% url 'projects_create' %}">Add a Project</a></li>
+            </ul>
+          </li>
+          <li class="features-links">
+            <a href="/">Features</a>
+            <ul class="dropdown">
+              <li><a href="{% url 'features_index' %}">All Features</a></li>
+              <li><a href="{% url 'features_create' %}">Add a Feature</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
         {% else %}
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'home' %}">Login</a></li>
           <li><a href="{% url 'signup' %}">Sign Up</a></li>
         {% endif %}
-      </ul>
-    </nav>
-  </header>
+      </div>
+    </ul>
+  </nav>
+
+
   <main>
     {% block content %}
     {% endblock %}
