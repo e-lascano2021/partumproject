@@ -20,8 +20,8 @@
       >
     {% else %}
       <img 
-        src="{% static 'images/' %}" 
-        alt=""
+        src="{% static 'images/default-img.jpeg' %}" 
+        alt="default project image"
       >
     {% endif %}
   </div>
@@ -56,7 +56,7 @@
 </section>
 
 
-<section>
+<section class="features-container">
   <div>
     <h2>Features</h2>
     <img src="{% static 'images/' %}" alt="" />
@@ -64,44 +64,45 @@
     <img src="{% static 'images/' %}" alt="" />
   </div>
 
-
-  <div projects-feature-container>
-    <h3>Features Included</h3>
-    <div class="subsection-content">
-      {% if project.features.count %}
-        {% for feature in project.features.all %}
-          <div class="feature-container">
-            <p>{{ feature.name }} - {{ feature.difficulty }}</p>
-            <form action="{% url 'unassoc_feature' project.id feature.id %}" method="post">
-              {% csrf_token %}
-                <button type="submit" class="btn danger"><i class="fas fa-minus"></i></button>
-            </form>
-          </div>
-        {% endfor %}
-      {% else %}
-        <p class="all-features"> There are no Features Included</p>
-      {% endif %}
-    </div>
-  </div>
-
-  <div class="">
-    <h3>Available Features</h3>
+  <div class="feature-lists">
     <div>
-      {% if features.count %}
-        {% for feature in features.all %}
-          <div>
-            <p>{{ feature.name }} - {{ feature.difficulty }}</p>
-            <form action="{% url 'assoc_feature' project.id feature.id %}" method="post">
-              {% csrf_token %}
-                <button type="submit" class="btn submit"><i class="fas fa-plus"></i></button>
-            </form>
-          </div>
-        {% endfor %}
-      {% else %}
-        <p>
-          You have added all available features to this project
-        </p>
-      {% endif %}
+      <h3>Features Included</h3>
+      <div>
+        {% if project.features.count %}
+          {% for feature in project.features.all %}
+            <div>
+              <p>{{ feature.name }} - {{ feature.difficulty }}</p>
+              <form action="{% url 'unassoc_feature' project.id feature.id %}" method="post">
+                {% csrf_token %}
+                  <button type="submit" class="btn danger"><i class="fas fa-minus"></i></button>
+              </form>
+            </div>
+          {% endfor %}
+        {% else %}
+          <p> There are no Features Included</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div>
+      <h3>Available Features</h3>
+      <div>
+        {% if features.count %}
+          {% for feature in features.all %}
+            <div>
+              <p>{{ feature.name }} - {{ feature.difficulty }}</p>
+              <form action="{% url 'assoc_feature' project.id feature.id %}" method="post">
+                {% csrf_token %}
+                  <button type="submit" class="btn submit"><i class="fas fa-plus"></i></button>
+              </form>
+            </div>
+          {% endfor %}
+        {% else %}
+          <p>
+            You have added all available features to this project
+          </p>
+        {% endif %}
+      </div>
     </div>
   </div>
 </section>

@@ -1,9 +1,24 @@
 .project-container {
-  padding: 35px 30px;
+  padding: 30px 25px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.features-container {
+  margin: 40px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 29, 255, 0.386);
+  border: white solid .1px;
+}
+
+.feature-lists {
+  display: flex;
+  flex-direction: row;
 }
 
 .project-img * {
@@ -49,23 +64,6 @@
   margin-right: 10px;
 }
 
-.unfed,
-.fed,
-.no-features,
-.all-features {
-  margin: 0;
-  font-weight: bold;
-}
-
-.unfed,
-.no-features {
-  color: var(--danger);
-}
-
-.fed,
-.all-features {
-  color: var(--submit);
-}
 
 .project-details h1 {
   font-size: var(--font-xxl);
@@ -89,88 +87,6 @@
   margin: 5px 0;
 }
 
-.feedings-feature-container > section {
-  width: 80%;
-  min-width: 360px;
-  border: var(--borders);
-  border-radius: var(--card-border-radius);
-  padding: 10px;
-  box-shadow: var(--card-box-shadow);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.subsection-title img {
-  height: 42px;
-  margin-left: 8px;
-}
-
-.subsection-title img:first-of-type {
-  margin-left: 16px;
-}
-
-.feedings h2,
-.features h2 {
-  font-size: 3.2rem;
-  margin: 0;
-}
-
-.feedings h3,
-.features h3 {
-  font-size: var(--font-xl);
-  margin: 10px 0;
-}
-
-.subsection-content p,
-.subsection-content input,
-.subsection-content select {
-  font-size: var(--font-l);
-}
-
-.subsection-content input,
-.subsection-content select {
-  margin-left: 5px;
-  padding: 3px;
-}
-
-.feedings table {
-  width: calc(100% - 16px);
-  text-align: left;
-  border-collapse: collapse;
-  margin: 0 8px;
-}
-
-.feedings td {
-  padding: 8px 5px;
-  font-size: var(--font-reg);
-}
-
-.feedings th {
-  font-size: var(--font-l);
-  padding: 5px 5px 0;
-  border-bottom: rgb(36, 116, 248) solid 2px;
-}
-
-.feedings tr:nth-child(even) {
-  background-color: #f3f3fd;
-}
-
-.feature-container p {
-  margin: 12px 0;
-}
-
-.feature-container a {
-  text-decoration: none;
-  color: #111;
-}
-
-.feature-container .btn {
-  padding: 3px 10px;
-  margin-left: 10px;
-}
-
 #file-input {
   overflow: hidden;
   position: absolute;
@@ -178,14 +94,18 @@
   height: 0.1px;
 }
 
-#file-name {
-  margin-bottom: 10px;
-}
-
 @media only screen and (min-width: 768px) {
   .project-container {
     padding: 35px 30px;
     flex-direction: row;
     align-items: center;
+  }
+  .features-container {
+    margin: 0 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 29, 255, 0.386);
+    border: white solid .1px;
   }
 }
