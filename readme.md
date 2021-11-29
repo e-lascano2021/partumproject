@@ -12,6 +12,14 @@ Partum Project lets you keep track of all of your projects. Add as many projects
 
 Lets talk about features too! Every project can have a feature you could add. Whether it be adding glitter or implementing a light/dark mode feature to your website. It all depends on your type of project. Similarly to projects, you can add as many features as you want and say how complicated the feature is. For example, adding glitter to a project is pretty simple; the cleanup is another story. On the other hand, making a light and dark mode isn't as simple and would take more time to complete compared to adding glitter.
 
+## Technologies Used:
+1. Python
+2. Django
+3. HTML
+4. CSS
+5. JavaScript
+6. Google Fonts
+7. Font Awesome
 
 https://fonts.google.com/specimen/Kaushan+Script?preview.size=58&category=Handwriting#standard-styles
 
