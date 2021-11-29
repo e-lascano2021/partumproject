@@ -118,6 +118,16 @@
   height: 0.1px;
 }
 
+.available > h3,
+.included > h3 {
+  font-size: 15px;
+}
+
+.available > p,
+.included > p {
+  font-size: 15px;
+}
+
 @media only screen and (min-width: 768px) {
   .project-container {
     padding: 35px 30px;
