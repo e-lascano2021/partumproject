@@ -16,6 +16,9 @@
   border: white solid .1px;
   position: relative;
 }
+.content {
+  padding: 20px;
+}
 
 .feature-lists {
   display: flex;
@@ -23,16 +26,19 @@
 }
 
 .included {
-  padding-right: 30px;
+  width: 150px;
   overflow-y: auto;
   height: 200px;
+  margin: 3px;
 }
 
 .available {
+  margin: 3px;
   padding-left: 30px;
+  height: 200px;
+  width: 150px;
   border-left: white dashed 2px;
   overflow-y: auto;
-  height: 200px;
 }
 
 .project-img * {
