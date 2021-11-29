@@ -21,7 +21,12 @@ Lets talk about features too! Every project can have a feature you could add. Wh
 6. Google Fonts
 7. Font Awesome
 
-https://fonts.google.com/specimen/Kaushan+Script?preview.size=58&category=Handwriting#standard-styles
+
+## Credits:
+
+- [Google Fonts](https://fonts.google.com/specimen/Kaushan+Script?preview.size=58&category=Handwriting#standard-styles)
+- [Font Awesome](https://fontawesome.com)
+- [Free SVG](https://freesvg.org/search?query=ideas&q=ideas&page=4)
 
 https://psmag.com/.image/t_share/MTMxODI3Mjk4OTkwMDgyMDU4/shutterstock_125158133jpg.jpg
 
