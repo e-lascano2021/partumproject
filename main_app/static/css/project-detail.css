@@ -1,5 +1,5 @@
 .project-container {
-  padding: 30px 25px;
+  padding: 25px 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -24,11 +24,15 @@
 
 .included {
   padding-right: 30px;
+  overflow-y: auto;
+  height: 200px;
 }
 
 .available {
   padding-left: 30px;
   border-left: white dashed 2px;
+  overflow-y: auto;
+  height: 200px;
 }
 
 .project-img * {
@@ -49,6 +53,10 @@
 
 .project-actions {
   margin-top: 20px;
+}
+
+.description {
+  padding: 15px;
 }
 
 .subsection-title {
@@ -120,4 +128,5 @@
     border: white solid .1px;
     position: relative;
   }
+  
 }
