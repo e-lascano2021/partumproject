@@ -75,7 +75,7 @@
               <p>{{ feature.name }} - {{ feature.difficulty }}</p>
               <form action="{% url 'unassoc_feature' project.id feature.id %}" method="post">
                 {% csrf_token %}
-                  <button type="submit" class="btn danger"><i class="fas fa-minus"></i></button>
+                  <button type="submit" class="feature-btn danger"><i class="fas fa-minus"></i></button>
               </form>
             </div>
           {% endfor %}
@@ -94,7 +94,7 @@
               <p>{{ feature.name }} - {{ feature.difficulty }}</p>
               <form action="{% url 'assoc_feature' project.id feature.id %}" method="post">
                 {% csrf_token %}
-                  <button type="submit" class="btn submit"><i class="fas fa-plus"></i></button>
+                  <button type="submit" class="feature-btn submit"><i class="fas fa-plus"></i></button>
               </form>
             </div>
           {% endfor %}

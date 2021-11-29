@@ -26,7 +26,8 @@
 }
 
 .included {
-  width: 150px;
+  padding-left: 30px;
+  width: 180px;
   overflow-y: auto;
   height: 200px;
   margin: 3px;
@@ -36,7 +37,7 @@
   margin: 3px;
   padding-left: 30px;
   height: 200px;
-  width: 150px;
+  width: 180px;
   border-left: white dashed 2px;
   overflow-y: auto;
 }
@@ -127,6 +128,19 @@
 .included > p {
   font-size: 15px;
 }
+
+.feature-btn {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+  text-decoration: none;
+  background-color: var(--button-bg);
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
 
 @media only screen and (min-width: 768px) {
   .project-container {
