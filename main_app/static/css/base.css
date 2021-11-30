@@ -231,7 +231,7 @@ header {
  }
  .dropdown {
   left: 50%;
-  top: 30px;
+  top: -50px;
   transform: translateX(35%);
  }
  .dropdown li:hover {
