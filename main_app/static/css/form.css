@@ -57,3 +57,7 @@ td > textarea {
 .signup > h1 {
   font-size: 30px;
 }
+
+.signup {
+  margin-top: 50px;
+}

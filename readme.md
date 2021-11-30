@@ -21,9 +21,10 @@ Lets talk about features too! Every project can have a feature you could add. Wh
 2. Django
 3. HTML
 4. CSS
-5. JavaScript
-6. Google Fonts
-7. Font Awesome
+5. Heroku
+6. JavaScript
+7. Google Fonts
+8. Font Awesome
 
 
 ## Credits:
