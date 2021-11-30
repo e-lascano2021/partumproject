@@ -39,3 +39,17 @@ td > textarea {
   align-self: flex-end;
   margin-right: 40px;
 }
+
+.signup {
+  display: flex;
+  flex-direction: row;
+}
+.signup-img {
+  margin-left: 20px; 
+  margin-top: 15px;
+  height: 50px;
+}
+
+.signup > h1 {
+  font-size: 30px;
+}

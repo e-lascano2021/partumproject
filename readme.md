@@ -31,12 +31,15 @@ Lets talk about features too! Every project can have a feature you could add. Wh
 - [Google Fonts](https://fonts.google.com/specimen/Kaushan+Script?preview.size=58&category=Handwriting#standard-styles)
 - [Font Awesome](https://fontawesome.com)
 - [Free SVG](https://freesvg.org/search?query=ideas&q=ideas&page=4)
+- [Flaticon](https://www.flaticon.com/)
 
+default img
 https://psmag.com/.image/t_share/MTMxODI3Mjk4OTkwMDgyMDU4/shutterstock_125158133jpg.jpg
 
+background
 https://images.unsplash.com/photo-1566410824233-a8011929225c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80
 
-https://fontawesome.com
+
 
 ## Future Plans:
 - AAU I would like to add links for specific projects (One To Many Relationship)
