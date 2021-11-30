@@ -46,3 +46,4 @@ https://images.unsplash.com/photo-1566410824233-a8011929225c?ixlib=rb-1.2.1&ixid
 - AAU I would like to add links for specific projects (One To Many Relationship)
 - AAU I would like to toggle light/dark mode
 - AAU I would like to hear sound when I click a button
+- AAU I would like to see animations
