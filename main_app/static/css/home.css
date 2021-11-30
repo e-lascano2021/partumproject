@@ -78,6 +78,7 @@ main > section {
     border-radius: var(--card-border-radius);
     box-shadow: var(--card-box-shadow);
     width: 100%;
+    background-color: rgba(38, 5, 38, 0.767);
   }
 
   .logo-container {
