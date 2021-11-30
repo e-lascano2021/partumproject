@@ -16,48 +16,57 @@
   {% endblock %}
 </head>
 <body>
-<header>
-  <nav class="navbar">
-    
-    <div class="logo">
-    <a href="/">
-    Partum Project<img 
-      src="{% static 'images/Birne.svg'%}" 
-      alt="Partum Project Logo"
-      id="logo-img"
-    > 
-    </a>
-    </div>
-    <ul class="nav-links">
-      <input type="checkbox" id="checkbox_toggle" />
-      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-      <div class="menu">
-        {% if user.is_authenticated %}
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li class="projects-links">
-            <a href="{% url 'projects_index' %}">Projects</a>
-            <ul class="dropdown">
-              <li><a href="{% url 'projects_index' %}">All Projects</a></li>
-              <li><a href="{% url 'projects_create' %}">Add a Project</a></li>
-            </ul>
-          </li>
-          <li class="features-links">
-            <a href="{% url 'features_index' %}">Features</a>
-            <ul class="dropdown">
-              <li><a href="{% url 'features_index' %}">All Features</a></li>
-              <li><a href="{% url 'features_create' %}">Add a Feature</a></li>
-            </ul>
-          </li>
-          <li><a href="{% url 'logout' %}">Logout</a></li>
-        {% else %}
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'home' %}">Login</a></li>
-          <li><a href="{% url 'signup' %}">Sign Up</a></li>
-        {% endif %}
+  <header>
+    <nav class="navbar">
+      
+      <div class="logo">
+        <a href="/">
+          Partum Project<img 
+            src="{% static 'images/Birne.svg'%}" 
+            alt="Partum Project Logo"
+            id="logo-img"
+          > 
+        </a>
       </div>
-    </ul>
-  </nav>
-</header>
+
+      <ul class="nav-links">
+
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+        <div class="menu">
+
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'about' %}">About</a></li>
+
+            <li class="projects-links">
+              <a href="{% url 'projects_index' %}">Projects</a>
+              <ul class="dropdown">
+                <li><a href="{% url 'projects_index' %}">All Projects</a></li>
+                <li><a href="{% url 'projects_create' %}">Add a Project</a></li>
+              </ul>
+            </li>
+
+            <li class="features-links">
+              <a href="{% url 'features_index' %}">Features</a>
+              <ul class="dropdown">
+                <li><a href="{% url 'features_index' %}">All Features</a></li>
+                <li><a href="{% url 'features_create' %}">Add a Feature</a></li>
+              </ul>
+            </li>
+
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+
+          {% else %}
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'home' %}">Login</a></li>
+            <li><a href="{% url 'signup' %}">Sign Up</a></li>
+          {% endif %}
+
+        </div>
+      </ul>
+    </nav>
+  </header>
   <main>
     {% block content %}
     {% endblock %}
