@@ -16,7 +16,6 @@
   backdrop-filter: blur(6px);
 }
 
-
 .card-content {
   padding: 10px;
   width: 100%;
@@ -25,6 +24,7 @@
 .card-title {
   color: white
 }
+
 .default-img,
 .usr-img {
   width: 100%;
@@ -47,4 +47,3 @@
   margin: 5px 0;
   font-size: var(--font-reg);
 }
-

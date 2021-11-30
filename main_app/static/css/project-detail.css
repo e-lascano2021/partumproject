@@ -16,6 +16,7 @@
   border: white solid .1px;
   position: relative;
 }
+
 .content {
   padding: 20px;
 }
@@ -46,11 +47,6 @@
   overflow-y: auto;
 }
 
-.project-img * {
-  width: 250px;
-  margin-right: 20px;
-}
-
 .project-details {
   display:flex;
   flex-direction: column;
@@ -60,6 +56,11 @@
   width: 350px;
   background-color: rgba(135, 27, 135, 0.386);
   border: white solid .1px;
+}
+
+.project-img * {
+  width: 250px;
+  margin-right: 20px;
 }
 
 .project-actions {
@@ -84,6 +85,25 @@
   margin-right: 10px;
 }
 
+.name-difficulty{
+  font-size: 15px;
+}
+
+.no-features {
+  font-size: 15px;
+}
+
+.feature-btn {
+  padding: 2px 6px;
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+  text-decoration: none;
+  background-color: var(--button-bg);
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+}
 
 .project-details h1 {
   font-size: var(--font-xxl);
@@ -105,38 +125,17 @@
   margin: 5px 0;
 }
 
+.available > h3,
+.included > h3 {
+  font-size: 18px;
+}
+
 #file-input {
   overflow: hidden;
   position: absolute;
   width: 0.1px;
   height: 0.1px;
 }
-
-.available > h3,
-.included > h3 {
-  font-size: 18px;
-}
-
-.name-difficulty{
-  font-size: 15px;
-}
-
-.no-features {
-  font-size: 15px;
-}
-
-.feature-btn {
-  padding: 2px 6px;
-  border-radius: 6px;
-  border-width: 2px;
-  border-style: solid;
-  text-decoration: none;
-  background-color: var(--button-bg);
-  font-weight: 600;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
 
 @media only screen and (min-width: 768px) {
   .project-container {

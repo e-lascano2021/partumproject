@@ -19,7 +19,6 @@ main > section {
   max-width: 130px;
 }
 
-
 .login {
   display: flex;
   flex-direction: column;

@@ -1,10 +1,3 @@
-.form-container {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  padding-right: 8%;
-}
-
 table {
   padding: 0 40px;
   width: 100%;
@@ -35,9 +28,20 @@ td > textarea {
   font-family: inherit;
 }
 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding-right: 8%;
+}
+
 .btn {
   align-self: flex-end;
   margin-right: 40px;
+}
+
+.signup {
+  margin-top: 50px;
 }
 
 .edit-add,
@@ -56,8 +60,4 @@ td > textarea {
 .edit-add > h1,
 .signup > h1 {
   font-size: 30px;
-}
-
-.signup {
-  margin-top: 50px;
 }
