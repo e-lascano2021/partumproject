@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 29, 255, 0.386);
+  background-color: rgba(150, 0, 150, 0.536);
   border: white solid .1px;
   position: relative;
 }
@@ -153,10 +153,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(255, 29, 255, 0.386);
+    background-color: rgba(150, 0, 150, 0.536);
     border: white solid .1px;
     position: relative;
-    width: clamp(300px, 50%, 600px)
+    width: clamp(300px, 50%, 500px)
   }
   
 }
