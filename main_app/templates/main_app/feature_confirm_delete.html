@@ -5,19 +5,22 @@
 
 <div class="page-header">
   <h1>Delete Feature?</h1>
-  <img src="{% static 'images/delete.png' %}" alt="Trash Can Image"/>
+  <img 
+    src="{% static 'images/delete.png' %}" 
+    alt="Trash Can Image"
+    />
 </div>
 <h2>Are you sure you want to delete {{ object.name }}?</h2>
 
 <form action="" method="POST" class="form">
   {% csrf_token %}
-  <a 
-    href="{% url 'features_index'%}" 
-    class="btn secondary"
-  >
-    Cancel
-  </a>
-  <button type="submit" class="btn danger">Yes - Delete!</button>
+    <a 
+      href="{% url 'features_index'%}" 
+      class="btn secondary"
+    >
+      Cancel
+    </a>
+    <button type="submit" class="btn danger">Yes - Delete!</button>
 </form>
 
 {% endblock %}
