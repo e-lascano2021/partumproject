@@ -148,7 +148,7 @@
     align-items: center;
   }
   .features-container {
-    margin: 0 450px;
+    margin: 0 auto;
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -156,6 +156,7 @@
     background-color: rgba(255, 29, 255, 0.386);
     border: white solid .1px;
     position: relative;
+    width: clamp(300px, 50%, 600px)
   }
   
 }
