@@ -6,13 +6,26 @@
 {% endblock %}
 
 {% block content %}
-<div>
+<div class="edit-add">
   {% if object %}
     <h1>Edit {{object.name}}</h1>
   {% else %}
     <h1>Add a Project</h1>
-  {% endif %}
-    <img src="{% static 'images/' %}" alt=""/>    
+  {% endif %} 
+    <img 
+    src="{% static 'images/Cinco.png' %}" 
+    alt=""
+    class="edit-add-img"/>    
+
+    <img 
+    src="{% static 'images/Uno.png' %}" 
+    alt=""
+    class="edit-add-img"/>
+
+    <img 
+    src="{% static 'images/Cuatro.png' %}" 
+    alt=""
+    class="edit-add-img"/>    
 </div>
 
 <form action="" method="post" class="form-container">
