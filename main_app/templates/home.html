@@ -13,6 +13,7 @@
     alt="Partum Project Logo"
   />
 </section>
+
 {% if not user.is_authenticated %}
   <section>
     <form action="{% url 'home' %}" method="post" class="login">
