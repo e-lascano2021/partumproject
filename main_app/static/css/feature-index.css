@@ -20,7 +20,7 @@
   backdrop-filter: blur(6px);
 }
 
-.card-bg{
+.card-bg {
   position: relative;
   display: flex;
   justify-content: center;
