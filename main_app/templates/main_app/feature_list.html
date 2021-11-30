@@ -13,30 +13,33 @@
 
 <section class="page-header">
   <h1>All Features</h1>
-  <img src="{% static 'images/Nueve.png' %}" alt="Star Checklist Image" />
-  <img src="{% static 'images/Diez.png' %}" alt="Website Image" />
-  <img src="{% static 'images/Once.png' %}" alt="Clicking On A List Image" />
-  <img src="{% static 'images/Trece.png' %}" alt="Ordered List Image" />
+  <img src="{% static 'images/Nueve.png' %}" alt="Star Checklist Image"/>
+  <img src="{% static 'images/Diez.png' %}" alt="Website Image"/>
+  <img src="{% static 'images/Once.png' %}" alt="Clicking On A List Image"/>
+  <img src="{% static 'images/Trece.png' %}" alt="Ordered List Image"/>
 </section>
 
 <section class="card-container">
   {% for feature in feature_list %}
-  <div class="card">
-    <div class="card-bg"><br>
-      <h2>{{ feature.name }}</h2>
-      {% if feature.difficulty == 'I' %}
-        <h2><br>Intermediate</h2>
-      {% elif feature.difficulty == 'D' %}
-        <h2><br>Difficult</h2>
-      {% else %}
-        <h2><br>Easy</h2>
-      {% endif %}
+    <div class="card">
+
+      <div class="card-bg"><br>
+        <h2>{{ feature.name }}</h2>
+        {% if feature.difficulty == 'I' %}
+          <h2><br>Intermediate</h2>
+        {% elif feature.difficulty == 'D' %}
+          <h2><br>Difficult</h2>
+        {% else %}
+          <h2><br>Easy</h2>
+        {% endif %}
+      </div>
+
+      <div class="feature-actions">
+        <a href="{% url 'features_update' feature.id %}" class="btn warn"><i class="far fa-edit"></i></a>
+        <a href="{% url 'features_delete' feature.id %}" class="btn danger"><i class="fas fa-trash-alt"></i></a> 
+      </div>
+
     </div>
-    <div class="feature-actions">
-      <a href="{% url 'features_update' feature.id %}" class="btn warn"><i class="far fa-edit"></i></a>
-      <a href="{% url 'features_delete' feature.id %}" class="btn danger"><i class="fas fa-trash-alt"></i></a> 
-    </div>
-  </div>
   {% endfor %}
 </section>
 
