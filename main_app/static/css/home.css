@@ -23,9 +23,6 @@ main > section {
   max-width: 375px;
 }
 
-.project-container {
-  width: 80%;
-}
 
 .login {
   display: flex;

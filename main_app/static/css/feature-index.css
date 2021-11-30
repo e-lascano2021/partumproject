@@ -13,7 +13,7 @@
   box-shadow: var(--card-box-shadow);
   border-radius: 10px;
   background-color: rgba(43, 6, 43, 0.536);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(1px);
 }
 
 .card-bg{

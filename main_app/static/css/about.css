@@ -1,0 +1,16 @@
+.about {
+  margin: 20px;
+  padding: 30px;
+}
+
+.about > h1 {
+  font-size: 33px;
+}
+
+.about > h2 {
+  font-size: 28px;
+}
+
+.about > h3 {
+  font-size: 19px;
+}
