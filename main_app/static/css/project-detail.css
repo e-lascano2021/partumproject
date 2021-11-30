@@ -27,7 +27,7 @@
 
 .included {
   padding-left: 30px;
-  width: 180px;
+  width: 200px;
   overflow-y: auto;
   height: 200px;
   margin: 3px;
@@ -37,7 +37,7 @@
   margin: 3px;
   padding-left: 30px;
   height: 200px;
-  width: 180px;
+  width: 200px;
   border-left: white dashed 2px;
   overflow-y: auto;
 }
@@ -65,16 +65,6 @@
 .description {
   margin: 0;
   padding: 0 18px;
-}
-
-.subsection-title {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.subsection-content {
-  margin: 0 8px;
 }
 
 .feature-container {
@@ -120,16 +110,19 @@
 
 .available > h3,
 .included > h3 {
+  font-size: 18px;
+}
+
+.name-difficulty{
   font-size: 15px;
 }
 
-.available > p,
-.included > p {
+.no-features {
   font-size: 15px;
 }
 
 .feature-btn {
-  padding: 4px 8px;
+  padding: 2px 6px;
   border-radius: 6px;
   border-width: 2px;
   border-style: solid;

@@ -69,7 +69,7 @@
         {% if project.features.count %}
           {% for feature in project.features.all %}
             <div>
-              <p>{{ feature.name }} - {{ feature.difficulty }}</p>
+              <p class="name-difficulty">{{ feature.name }} - {{ feature.difficulty }}</p>
               <form action="{% url 'unassoc_feature' project.id feature.id %}" method="post">
                 {% csrf_token %}
                   <button type="submit" class="feature-btn danger"><i class="fas fa-minus"></i></button>
@@ -77,7 +77,7 @@
             </div>
           {% endfor %}
         {% else %}
-          <p> There are no Features Included</p>
+          <p class="no-features"> There are no Features Included</p>
         {% endif %}
       </div>
     </div>
@@ -88,7 +88,7 @@
         {% if features.count %}
           {% for feature in features.all %}
             <div>
-              <p>{{ feature.name }} - {{ feature.difficulty }}</p>
+              <p class="name-difficulty">{{ feature.name }} - {{ feature.difficulty }}</p>
               <form action="{% url 'assoc_feature' project.id feature.id %}" method="post">
                 {% csrf_token %}
                   <button type="submit" class="feature-btn submit"><i class="fas fa-plus"></i></button>
@@ -96,7 +96,7 @@
             </div>
           {% endfor %}
         {% else %}
-          <p>
+          <p class="no-features">
             You have added all available features to this project
           </p>
         {% endif %}
