@@ -7,7 +7,6 @@
 }
 
 .card {
-  z-index: auto;
   width: 180px;
   margin: 10px;
   border: var(--borders);
